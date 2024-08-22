@@ -9,7 +9,7 @@
         <style>
             /* Set the background color for the body */
             body {
-                background-color: #ededed; /* Light grey background color */
+                background-color: white; /* Light grey background color */
                 height: 500px;
                 margin-top: 1px;
             }
@@ -51,6 +51,12 @@
                 }
                 
             }
+             @media (max-width :576px) {
+                #foot{
+                   margin-top: 300px;
+                }
+                
+            }
             a{
                 text-decoration: none;
             }
@@ -75,6 +81,22 @@
             .img-1{
                    width: 30%;
                    margin-left: 30%;
+            }
+              #meta{
+                width: 10%;
+                margin-left: 45%;
+                
+            }
+            .from{
+                margin-left: 60%;
+                padding: 0%;
+                margin: 0%;
+                text-align: center;
+                margin-top: 3px;
+            }
+            .footer_1{
+                background-color: whitesmoke;
+                border-top: 1px solid gray;
             }
         </style>
     </head>
@@ -105,7 +127,7 @@
                         </div>
                         <div class="mb-3 text-center">
                             <img src="face.png" alt="" class="img-name">
-                            <a href="https://www.facebook.com" class="btn btn-secondary">Log in with Facebook</a>
+                            <a href="https://www.facebook.com" class="btn btn-secondary"><img src="communication.png" alt="" class="img-name" width="25px" style="padding-right: 2px;">Log in with Facebook</a>
                         </div>
                         <div class="mb-3 text-center">
                             <a href="#" class="pass-word">Forgot password?</a>
@@ -127,7 +149,7 @@
             <!-- Footer Links -->
             <div class="row mt-3">
                 <div class="col-sm-12">
-                    <ul class="list-unstyled d-flex flex-wrap justify-content-around">
+                    <ul class="list-unstyled d-flex flex-wrap justify-content-around" id="foot">
                         <li><a href="#">Meta</a></li>
                         <li><a href="#">About</a></li>
                         <li><a href="#">Blog</a></li>
@@ -144,6 +166,15 @@
                 </div>
             </div>
         </div>
+          <footer>
+            <div class="footer_1">
+                <p class="from">from</p>
+                <img src="meta.png" alt="" class="center" id="meta">
+
+
+
+            </div>
+        </footer>
     
     </body>
     
