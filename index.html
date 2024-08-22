@@ -3,10 +3,57 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Page</title>
-    <link rel="stylesheet" href="css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        /* Set the background color for the body */
+        body {
+            background-color: #f0f2f5; /* Light grey background color */
+        }
+
+        /* Make the image smaller on mobile devices */
+        .img-responsive {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Style for the form container */
+        .form-container {
+            background-color: white; /* White background for the form */
+            padding: 20px; /* Padding around the form */
+            border-radius: 8px; /* Rounded corners */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+        }
+
+        /* Center text and elements within form container */
+        .text-center {
+            text-align: center;
+        }
+
+        /* Responsive image adjustments */
+        @media (max-width: 576px) {
+            .img-responsive {
+                width: 80%;
+            }
+        }
+
+        /* Custom styles for the "Log in" button */
+        .btn-primary {
+            background-color: #007bff; /* Adjust as needed */
+            border-color: #007bff;
+        }
+
+        /* Custom styles for the "Sign up" and "Forgot password" links */
+        .pass-word, .sign {
+            color: #007bff; /* Adjust as needed */
+        }
+
+        .pass-word:hover, .sign:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 
 <body>
@@ -15,39 +62,41 @@
         <div class="row">
             <!-- Left Column with Image -->
             <div class="col-sm-6">
-                <img src="mobile.jpg" alt="login" class="img-fluid">
+                <img src="mobile.jpg" alt="login" class="img-fluid img-responsive">
             </div>
             <!-- Right Column with Login Form -->
             <div class="col-sm-6">
-                <img class="img-1 img-fluid" src="insta.png" alt="">
-                <div class="mb-3">
-                    <input type="text" class="form-control" placeholder="Phone number, username or E-mail">
-                </div>
-                <div class="mb-3">
-                    <input type="password" class="form-control" placeholder="Password">
-                </div>
-                <div class="mb-3 d-flex justify-content-center">
-                    <input type="button" class="btn btn-primary" value="Log in">
-                </div>
-                <div class="mb-3 text-center">
-                    <label for="or" class="or-value">________________ OR ________________</label>
-                </div>
-                <div class="mb-3 text-center">
-                    <img src="face.png" alt="" class="img-name">
-                    <a href="https://www.facebook.com" class="btn btn-secondary">Log in with Facebook</a>
-                </div>
-                <div class="mb-3 text-center">
-                    <a href="#" class="pass-word">Forgot password?</a>
-                </div>
-                <div class="mb-3 text-center">
-                    <label for="or" class="no-account">Don't have an account? <a href="#" class="sign"> Sign up</a></label>
-                </div>
-                <div class="mb-3 text-center">
-                    <label for="label-1" class="label-1">Get The App</label>
-                </div>
-                <div class="text-center">
-                    <a href="https://www.apple.com/in/store"><img src="playstore.png" alt="Get on the App Store" class="img-fluid"></a>
-                    <a href="https://play.google.com"><img src="Screenshot 2024-08-22 172314.png" alt="Get it on Google Play" class="img-fluid"></a>
+                <div class="form-container">
+                    <img class="img-1 img-fluid" src="insta.png" alt="">
+                    <div class="mb-3">
+                        <input type="text" class="form-control" placeholder="Phone number, username or E-mail">
+                    </div>
+                    <div class="mb-3">
+                        <input type="password" class="form-control" placeholder="Password">
+                    </div>
+                    <div class="mb-3 d-flex justify-content-center">
+                        <input type="button" class="btn btn-primary" value="Log in">
+                    </div>
+                    <div class="mb-3 text-center">
+                        <label for="or" class="or-value">________________ OR ________________</label>
+                    </div>
+                    <div class="mb-3 text-center">
+                        <img src="face.png" alt="" class="img-name">
+                        <a href="https://www.facebook.com" class="btn btn-secondary">Log in with Facebook</a>
+                    </div>
+                    <div class="mb-3 text-center">
+                        <a href="#" class="pass-word">Forgot password?</a>
+                    </div>
+                    <div class="mb-3 text-center">
+                        <label for="or" class="no-account">Don't have an account? <a href="#" class="sign"> Sign up</a></label>
+                    </div>
+                    <div class="mb-3 text-center">
+                        <label for="label-1" class="label-1">Get The App</label>
+                    </div>
+                    <div class="text-center">
+                        <a href="https://www.apple.com/in/store"><img src="playstore.png" alt="Get on the App Store" class="img-fluid"></a>
+                        <a href="https://play.google.com"><img src="Screenshot 2024-08-22 172314.png" alt="Get it on Google Play" class="img-fluid"></a>
+                    </div>
                 </div>
             </div>
         </div>
