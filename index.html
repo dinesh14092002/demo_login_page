@@ -98,10 +98,43 @@
                 background-color: whitesmoke;
                 border-top: 1px solid gray;
             }
+                 .loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #fff;
+            z-index: 9999; /* Ensure it covers the entire page */
+        }
+
+        /* Main content styling */
+        .main-content {
+            display: none; /* Initially hide the main content */
+        }
+        .load{
+            width: 200px;
+            height: 300px;
+        }
+             @media (max-width: 575.98px) {
+            .loading-screen {
+                display: flex; /* Show loading screen on small screens */
+            }
+
+            .main-content {
+                display: none; /* Hide main content initially */
+            }
+        }
         </style>
     </head>
     
     <body>
+          <div class="loading-screen">
+            <img src="loading.jpeg" alt="Loading" class="load" >
+        </div>
     
         <div class="container mt-5">
             <div class="row">
@@ -175,6 +208,28 @@
 
             </div>
         </footer>
+         <script>
+            // Function to hide the loading screen and show the main content
+            function hideLoadingScreen() {
+                const loadingScreen = document.querySelector('.loading-screen');
+                const mainContent = document.querySelector('.main-content');
+    
+                if (window.innerWidth <= 575) {
+                    setTimeout(() => {
+                        loadingScreen.style.display = 'none'; // Hide the loading screen
+                        mainContent.style.display = 'block';  // Show the main content
+                    }, 2000); // 2000 milliseconds = 2 seconds
+                } else {
+                    loadingScreen.style.display = 'none'; // Hide the loading screen on larger screens
+                    mainContent.style.display = 'block';  // Show the main content on larger screens
+                }
+            }
+    
+            // Call the function when the DOM is fully loaded
+            document.addEventListener('DOMContentLoaded', hideLoadingScreen);
+            // Also call on resize to handle changes in screen size dynamically
+            window.addEventListener('resize', hideLoadingScreen);
+        </script>
     
     </body>
     
